@@ -1,0 +1,52 @@
+<!-- <h1>Questions#answer</h1> -->
+<!-- <p>Find me in app/views/questions/answer.html.erb</p> -->
+<!-- <%= params %> -->
+
+<h1>Stupid coaching</h1>
+
+<!-- <%= params %> -->
+<!-- <%= params['question'] %> -->
+<%if params['question'] == "I am going to work!" %>
+    <div class="dialogue">
+      <p><b><%= params['question'] %></b></p>
+      <p><i>- You</i></p>
+    </div>
+
+    <div class="dialogue">
+      <p><b>Great</b></p>
+      <p><i>- Coach</i></p>
+    </div>
+<%elsif params['question'][-1] == "?" %>
+   <div class="dialogue">
+      <p><b><%= params['question'] %></b></p>
+      <p><i>- You</i></p>
+    </div>
+
+    <div class="dialogue">
+      <p><b>Silly question, get dressed and go to work!</b></p>
+      <p><i>- Coach</i></p>
+    </div>
+<% else %>
+   <div class="dialogue">
+      <p><b><%= params['question'] %></b></p>
+      <p><i>- You</i></p>
+    </div>
+
+    <div class="dialogue coach">
+      <p><b>I don't care, get dressed and go to work!</b></p>
+      <p><i>- Coach</i></p>
+    </div>
+    <% end %>
+
+<a href="/ask">Ask a new question</a>
+
+
+
+<!-- if params['smth'] == true -->
+
+
+
+<!--     If the message is I am going to work, the coach will answer Great!
+    If the message has a question mark ? at the end, the coach will answer Silly question, get dressed and go to work!.
+    Otherwise he will answer I don't care, get dressed and go to work!
+ -->
